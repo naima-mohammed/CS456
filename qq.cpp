@@ -56,7 +56,8 @@ public:
                 }
             }
 
-            fitness_vals.push_back(-1 * penalty);
+            int maxPairs = 28;
+            fitness_vals.push_back(maxPairs - (penalty / 2));
         }
 
         return fitness_vals;
