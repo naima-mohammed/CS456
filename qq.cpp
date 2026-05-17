@@ -1,45 +1,29 @@
 #include <iostream>
-#include <vector>
-#include <cmath>
-#include <cstdlib>
-#include <ctime>
-
+#include <vector> 
+#include <cmath>// for abs()
+#include <cstdlib>// for rand() and srand()
+#include <ctime> // for time() to seed the random number generator
 using namespace std;
 
 class Population {
 private:
     vector<vector<int>> population;
-
 public:
-
     // Constructor
-    Population() {
-        initPop();
-    }
-
-    // Initial population
-    void initPop() {
-
-        population = {
-    {6, 1, 7, 3, 6, 1, 4, 0},
-    {3, 4, 0, 6, 6, 1, 2, 3},
-    {0, 3, 7, 0, 1, 1, 4, 0},
-    {0, 2, 2, 7, 4, 4, 7, 3}
-        };
-    }
+    Population(){ }    
+    Population(vector<vector<int>> pop)
+     {population = pop;}
 
     // Calculate fitness
-    vector<int> calcFitness() {
-
+    vector<int> calcFitness() 
+    {   
         vector<int> fitness_vals;
-
-        for (int p = 0; p < population.size(); p++) {
-
+        for (int p = 0; p < population.size(); p++)
+         {
             vector<int> x = population[p];
-
-            int penalty = 0;
-
-            for (int i = 0; i < 8; i++) {
+            int conflicts_num = 0;
+            for (int i = 0; i < 8; i++)
+             {
 
                 int r = x[i];
 
@@ -51,13 +35,13 @@ public:
                     int d = abs(i - j);
 
                     if (x[j] == r || x[j] == r - d || x[j] == r + d) {
-                        penalty++;
+                        conflicts_num++;
                     }
                 }
             }
 
             int maxPairs = 28;
-            fitness_vals.push_back(maxPairs - (penalty / 2));
+            fitness_vals.push_back(maxPairs - (conflicts_num / 2));
         }
 
         return fitness_vals;
@@ -71,21 +55,6 @@ public:
         // Copy fitness values
         for (int i = 0; i < fitness_vals.size(); i++) {
             probs.push_back(fitness_vals[i]);
-        }
-
-        // Find minimum value
-        double minVal = probs[0];
-
-        for (int i = 0; i < probs.size(); i++) {
-
-            if (probs[i] < minVal)
-                minVal = probs[i];
-        }
-
-        // probs += abs(min) + 1
-        for (int i = 0; i < probs.size(); i++) {
-
-            probs[i] = probs[i] + abs(minVal) + 1;
         }
 
         // Sum probabilities
@@ -102,7 +71,8 @@ public:
         {
             probs[i] = probs[i] / total;
 
-            cout << "Selection Probability: " << probs[i] << endl;
+           
+           cout << "selection probabilities: " << i + 1 << " Probability = "<< probs[i]<< endl;
         }
 
         int N = population.size();
@@ -191,8 +161,28 @@ public:
 int main() {
 
     srand(time(0));
+     // Initial Population
+     // مثال شيت 
+    vector<vector<int>> people = {
 
-    Population initial_population;
+    {2,4,7,4,8,5,5,2},
+    {3,2,7,5,2,4,1,1},
+    {2,4,4,1,5,1,2,4},
+    {3,2,5,4,3,2,1,3}
+    };
+
+
+    /*
+// مثال فيديو 
+     vector<vector<int>> people = {
+    {6,1,7,3,6,1,4,0},
+    {3,4,0,6,6,1,2,3},
+    {0,3,7,0,1,1,4,0},
+    {0,2,2,7,4,4,7, 3}
+    };
+*/
+
+    Population initial_population(people);
 
     cout << "Initial Population:\n";
 
