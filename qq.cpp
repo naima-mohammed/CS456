@@ -29,8 +29,7 @@ public:
 
                 for (int j = 0; j < 8; j++) {
 
-                    if (i == j)
-                        continue;
+                    if (i == j)continue;// Skip the same queen
 
                     int d = abs(i - j);
 

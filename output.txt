@@ -1,0 +1,1075 @@
+
+*********Population 1 - Roulette Wheel************
+[ 6 1 7 3 6 1 4 0 ]
+[ 3 4 0 6 6 1 2 3 ]
+[ 0 3 7 0 1 1 4 0 ]
+[ 0 2 2 7 4 4 7 3 ]
+
+Generation 1
+Selection Probability 1 = 0.253012
+Selection Probability 2 = 0.228916
+Selection Probability 3 = 0.277108
+Selection Probability 4 = 0.240964
+
+Population After Mutation:
+[ 0 2 2 7 4 4 7 3 ]
+[ 0 2 2 7 4 4 7 3 ]
+[ 6 1 7 7 4 4 7 3 ]
+[ 0 2 2 3 6 1 4 0 ]
+
+Generation 2
+Selection Probability 1 = 0.253012
+Selection Probability 2 = 0.228916
+Selection Probability 3 = 0.277108
+Selection Probability 4 = 0.240964
+
+Population After Mutation:
+[ 6 1 7 3 6 1 4 0 ]
+[ 0 3 7 0 1 1 4 0 ]
+[ 6 1 7 3 6 1 4 0 ]
+[ 6 1 7 3 4 1 4 0 ]
+
+Generation 3
+Selection Probability 1 = 0.253012
+Selection Probability 2 = 0.228916
+Selection Probability 3 = 0.277108
+Selection Probability 4 = 0.240964
+
+Population After Mutation:
+[ 0 3 7 0 1 1 4 0 ]
+[ 0 3 7 0 1 1 4 0 ]
+[ 0 3 7 0 1 1 4 0 ]
+[ 0 3 7 0 7 1 4 0 ]
+
+Generation 4
+Selection Probability 1 = 0.253012
+Selection Probability 2 = 0.228916
+Selection Probability 3 = 0.277108
+Selection Probability 4 = 0.240964
+
+Population After Mutation:
+[ 3 4 0 6 6 1 2 3 ]
+[ 3 4 0 6 6 1 2 3 ]
+[ 0 3 7 0 1 1 4 4 ]
+[ 6 1 7 3 6 1 4 0 ]
+
+Generation 5
+Selection Probability 1 = 0.253012
+Selection Probability 2 = 0.228916
+Selection Probability 3 = 0.277108
+Selection Probability 4 = 0.240964
+
+Population After Mutation:
+[ 3 4 0 6 6 1 2 3 ]
+[ 0 2 2 7 4 4 7 3 ]
+[ 0 2 2 7 4 4 4 3 ]
+[ 3 4 0 6 6 1 7 3 ]
+
+Generation 6
+Selection Probability 1 = 0.253012
+Selection Probability 2 = 0.228916
+Selection Probability 3 = 0.277108
+Selection Probability 4 = 0.240964
+
+Population After Mutation:
+[ 0 2 2 7 4 4 4 3 ]
+[ 0 6 7 0 1 1 7 3 ]
+[ 0 2 2 7 4 4 7 3 ]
+[ 0 2 2 7 4 4 7 3 ]
+
+Generation 7
+Selection Probability 1 = 0.253012
+Selection Probability 2 = 0.228916
+Selection Probability 3 = 0.277108
+Selection Probability 4 = 0.240964
+
+Population After Mutation:
+[ 3 4 0 6 6 1 2 3 ]
+[ 0 2 2 7 4 4 7 3 ]
+[ 0 2 2 7 4 4 7 3 ]
+[ 6 1 7 3 6 1 4 0 ]
+
+Generation 8
+Selection Probability 1 = 0.253012
+Selection Probability 2 = 0.228916
+Selection Probability 3 = 0.277108
+Selection Probability 4 = 0.240964
+
+Population After Mutation:
+[ 3 4 0 6 6 1 4 0 ]
+[ 6 1 7 3 6 1 2 3 ]
+[ 3 4 0 6 6 1 2 3 ]
+[ 3 4 0 2 6 1 2 3 ]
+
+Roulette Execution Time = 5 ms
+
+Roulette Finished
+
+*********Population 2 - Roulette Wheel************
+[ 1 5 8 6 3 7 2 4 ]
+[ 4 2 7 3 6 8 5 1 ]
+[ 6 3 1 8 5 2 4 7 ]
+[ 7 4 2 5 8 1 3 6 ]
+
+Generation 1
+
+Perfect Solution Found!
+
+Roulette Execution Time = 0 ms
+
+Roulette Finished
+
+*********Population 3 - Roulette Wheel************
+[ 0 4 7 5 2 6 1 1 ]
+[ 6 1 5 2 0 7 4 4 ]
+[ 3 7 0 4 6 1 5 5 ]
+[ 5 2 6 1 7 4 0 0 ]
+
+Generation 1
+Selection Probability 1 = 0.245283
+Selection Probability 2 = 0.254717
+Selection Probability 3 = 0.245283
+Selection Probability 4 = 0.254717
+
+Population After Mutation:
+[ 6 1 5 2 0 7 4 4 ]
+[ 0 4 7 5 2 6 1 1 ]
+[ 0 4 7 5 2 6 1 1 ]
+[ 5 2 6 1 7 4 0 0 ]
+
+Generation 2
+Selection Probability 1 = 0.245283
+Selection Probability 2 = 0.254717
+Selection Probability 3 = 0.245283
+Selection Probability 4 = 0.254717
+
+Population After Mutation:
+[ 6 1 5 2 6 7 4 4 ]
+[ 3 7 0 4 6 1 5 5 ]
+[ 5 2 6 1 7 4 0 0 ]
+[ 5 2 6 1 7 4 0 0 ]
+
+Generation 3
+Selection Probability 1 = 0.245283
+Selection Probability 2 = 0.254717
+Selection Probability 3 = 0.245283
+Selection Probability 4 = 0.254717
+
+Population After Mutation:
+[ 0 4 7 5 2 7 4 4 ]
+[ 6 1 5 2 1 6 1 1 ]
+[ 5 2 6 1 7 4 0 0 ]
+[ 5 2 6 1 7 4 0 0 ]
+
+Generation 4
+Selection Probability 1 = 0.245283
+Selection Probability 2 = 0.254717
+Selection Probability 3 = 0.245283
+Selection Probability 4 = 0.254717
+
+Population After Mutation:
+[ 0 7 0 4 6 1 5 5 ]
+[ 3 4 7 5 2 6 1 1 ]
+[ 5 2 6 1 7 1 5 5 ]
+[ 3 7 0 4 6 4 0 0 ]
+
+Generation 5
+Selection Probability 1 = 0.245283
+Selection Probability 2 = 0.254717
+Selection Probability 3 = 0.245283
+Selection Probability 4 = 0.254717
+
+Population After Mutation:
+[ 5 2 6 1 7 4 0 0 ]
+[ 0 4 7 5 2 6 1 1 ]
+[ 6 1 5 2 0 7 4 5 ]
+[ 3 7 0 4 6 1 5 4 ]
+
+Generation 6
+Selection Probability 1 = 0.245283
+Selection Probability 2 = 0.254717
+Selection Probability 3 = 0.245283
+Selection Probability 4 = 0.254717
+
+Population After Mutation:
+[ 3 7 0 4 5 4 0 0 ]
+[ 5 2 6 1 6 1 5 5 ]
+[ 0 4 7 5 2 7 4 4 ]
+[ 6 1 5 2 0 6 1 1 ]
+
+Generation 7
+Selection Probability 1 = 0.245283
+Selection Probability 2 = 0.254717
+Selection Probability 3 = 0.245283
+Selection Probability 4 = 0.254717
+
+Population After Mutation:
+[ 6 1 5 2 0 7 4 4 ]
+[ 3 7 0 4 6 1 5 5 ]
+[ 3 7 0 3 6 1 5 5 ]
+[ 3 7 0 4 6 1 5 5 ]
+
+Generation 8
+Selection Probability 1 = 0.245283
+Selection Probability 2 = 0.254717
+Selection Probability 3 = 0.245283
+Selection Probability 4 = 0.254717
+
+Population After Mutation:
+[ 5 2 6 4 6 1 5 5 ]
+[ 3 7 0 1 7 4 0 0 ]
+[ 5 7 1 4 6 1 5 5 ]
+[ 3 2 6 1 7 4 0 0 ]
+
+Roulette Execution Time = 2 ms
+
+Roulette Finished
+
+*********Population 4 - Roulette Wheel************
+[ 0 4 7 5 2 6 1 3 ]
+[ 6 1 5 2 0 7 4 3 ]
+[ 3 7 0 4 6 1 5 2 ]
+[ 5 2 6 1 7 4 0 3 ]
+[ 1 6 2 5 7 4 0 3 ]
+[ 4 7 3 0 2 5 1 6 ]
+
+Generation 1
+
+Perfect Solution Found!
+
+Roulette Execution Time = 0 ms
+
+Roulette Finished
+
+*********Population 5 - Roulette Wheel************
+[ 4 6 0 0 4 4 3 6 ]
+[ 6 5 5 7 1 4 5 1 ]
+[ 5 3 0 7 0 6 3 5 ]
+[ 6 7 4 0 3 3 6 2 ]
+
+Generation 1
+Selection Probability 1 = 0.229885
+Selection Probability 2 = 0.241379
+Selection Probability 3 = 0.264368
+Selection Probability 4 = 0.264368
+
+Population After Mutation:
+[ 6 7 4 0 3 4 3 6 ]
+[ 4 6 0 0 4 3 6 2 ]
+[ 4 6 0 0 4 4 3 6 ]
+[ 6 5 5 7 1 4 5 1 ]
+
+Generation 2
+Selection Probability 1 = 0.229885
+Selection Probability 2 = 0.241379
+Selection Probability 3 = 0.264368
+Selection Probability 4 = 0.264368
+
+Population After Mutation:
+[ 5 3 0 7 0 6 7 5 ]
+[ 6 7 4 0 3 3 6 2 ]
+[ 2 6 0 0 4 4 3 6 ]
+[ 4 3 0 7 0 6 3 5 ]
+
+Generation 3
+Selection Probability 1 = 0.229885
+Selection Probability 2 = 0.241379
+Selection Probability 3 = 0.264368
+Selection Probability 4 = 0.264368
+
+Population After Mutation:
+[ 4 6 0 0 4 4 3 6 ]
+[ 4 6 0 0 4 4 3 6 ]
+[ 5 3 0 7 0 6 3 5 ]
+[ 4 6 0 0 4 4 3 6 ]
+
+Generation 4
+Selection Probability 1 = 0.229885
+Selection Probability 2 = 0.241379
+Selection Probability 3 = 0.264368
+Selection Probability 4 = 0.264368
+
+Population After Mutation:
+[ 6 7 4 0 3 3 3 5 ]
+[ 5 3 3 7 0 6 6 2 ]
+[ 5 3 0 7 0 6 5 1 ]
+[ 6 5 5 7 1 4 3 5 ]
+
+Generation 5
+Selection Probability 1 = 0.229885
+Selection Probability 2 = 0.241379
+Selection Probability 3 = 0.264368
+Selection Probability 4 = 0.264368
+
+Population After Mutation:
+[ 6 7 4 0 3 3 6 2 ]
+[ 6 7 4 0 3 3 6 2 ]
+[ 6 5 5 7 1 3 6 2 ]
+[ 6 7 4 0 3 4 5 1 ]
+
+Generation 6
+Selection Probability 1 = 0.229885
+Selection Probability 2 = 0.241379
+Selection Probability 3 = 0.264368
+Selection Probability 4 = 0.264368
+
+Population After Mutation:
+[ 6 5 5 7 1 4 3 2 ]
+[ 6 7 4 0 3 3 5 1 ]
+[ 6 7 4 0 0 6 3 5 ]
+[ 5 3 0 7 3 3 6 2 ]
+
+Generation 7
+Selection Probability 1 = 0.229885
+Selection Probability 2 = 0.241379
+Selection Probability 3 = 0.264368
+Selection Probability 4 = 0.264368
+
+Population After Mutation:
+[ 5 3 4 0 3 3 6 2 ]
+[ 6 7 0 7 0 6 3 5 ]
+[ 6 7 4 0 3 3 6 1 ]
+[ 4 6 0 0 4 4 3 6 ]
+
+Generation 8
+Selection Probability 1 = 0.229885
+Selection Probability 2 = 0.241379
+Selection Probability 3 = 0.264368
+Selection Probability 4 = 0.264368
+
+Population After Mutation:
+[ 5 3 0 7 0 6 3 5 ]
+[ 4 6 0 0 4 4 3 6 ]
+[ 6 5 5 7 1 4 5 6 ]
+[ 4 6 0 0 0 4 3 1 ]
+
+Roulette Execution Time = 0 ms
+
+Roulette Finished
+
+*********Population 1 - Tournament********[ 6 1 7 3 6 1 4 0 ]
+[ 3 4 0 6 6 1 2 3 ]
+[ 0 3 7 0 1 1 4 0 ]
+[ 0 2 2 7 4 4 7 3 ]
+
+Generation 1
+
+Tournament 1
+Chosen Individual 3 Fitness = 23
+Chosen Individual 4 Fitness = 20
+Winner Individual = 3
+
+Tournament 2
+Chosen Individual 3 Fitness = 23
+Chosen Individual 1 Fitness = 21
+Winner Individual = 3
+
+Tournament 3
+Chosen Individual 1 Fitness = 21
+Chosen Individual 1 Fitness = 21
+Winner Individual = 1
+
+Tournament 4
+Chosen Individual 1 Fitness = 21
+Chosen Individual 1 Fitness = 21
+Winner Individual = 1
+
+Population After Mutation:
+[ 0 3 7 3 1 1 4 0 ]
+[ 0 3 7 0 1 4 4 0 ]
+[ 6 1 7 3 6 1 4 0 ]
+[ 6 1 7 3 6 1 4 0 ]
+
+Generation 2
+
+Tournament 1
+Chosen Individual 1 Fitness = 21
+Chosen Individual 1 Fitness = 21
+Winner Individual = 1
+
+Tournament 2
+Chosen Individual 4 Fitness = 20
+Chosen Individual 1 Fitness = 21
+Winner Individual = 1
+
+Tournament 3
+Chosen Individual 1 Fitness = 21
+Chosen Individual 1 Fitness = 21
+Winner Individual = 1
+
+Tournament 4
+Chosen Individual 2 Fitness = 19
+Chosen Individual 1 Fitness = 21
+Winner Individual = 1
+
+Population After Mutation:
+[ 6 1 7 3 6 3 4 0 ]
+[ 6 1 7 3 6 1 4 0 ]
+[ 6 1 7 3 6 1 4 0 ]
+[ 6 1 7 3 6 1 4 0 ]
+
+Generation 3
+
+Tournament 1
+Chosen Individual 1 Fitness = 21
+Chosen Individual 3 Fitness = 23
+Winner Individual = 3
+
+Tournament 2
+Chosen Individual 2 Fitness = 19
+Chosen Individual 2 Fitness = 19
+Winner Individual = 2
+
+Tournament 3
+Chosen Individual 1 Fitness = 21
+Chosen Individual 2 Fitness = 19
+Winner Individual = 1
+
+Tournament 4
+Chosen Individual 4 Fitness = 20
+Chosen Individual 3 Fitness = 23
+Winner Individual = 3
+
+Population After Mutation:
+[ 0 3 7 0 1 1 2 3 ]
+[ 3 4 0 6 6 1 4 0 ]
+[ 6 1 7 3 6 6 4 0 ]
+[ 0 3 2 0 1 1 4 0 ]
+
+Generation 4
+
+Tournament 1
+Chosen Individual 2 Fitness = 19
+Chosen Individual 4 Fitness = 20
+Winner Individual = 4
+
+Tournament 2
+Chosen Individual 1 Fitness = 21
+Chosen Individual 3 Fitness = 23
+Winner Individual = 3
+
+Tournament 3
+Chosen Individual 1 Fitness = 21
+Chosen Individual 4 Fitness = 20
+Winner Individual = 1
+
+Tournament 4
+Chosen Individual 3 Fitness = 23
+Chosen Individual 3 Fitness = 23
+Winner Individual = 3
+
+Population After Mutation:
+[ 0 2 2 7 4 4 7 0 ]
+[ 0 3 7 0 1 1 1 3 ]
+[ 6 1 7 3 6 1 4 0 ]
+[ 0 5 7 0 1 1 4 0 ]
+
+Generation 5
+
+Tournament 1
+Chosen Individual 1 Fitness = 21
+Chosen Individual 1 Fitness = 21
+Winner Individual = 1
+
+Tournament 2
+Chosen Individual 4 Fitness = 20
+Chosen Individual 4 Fitness = 20
+Winner Individual = 4
+
+Tournament 3
+Chosen Individual 2 Fitness = 19
+Chosen Individual 2 Fitness = 19
+Winner Individual = 2
+
+Tournament 4
+Chosen Individual 4 Fitness = 20
+Chosen Individual 1 Fitness = 21
+Winner Individual = 1
+
+Population After Mutation:
+[ 6 1 2 7 4 4 7 3 ]
+[ 0 2 7 3 6 1 4 0 ]
+[ 3 1 7 3 6 1 4 0 ]
+[ 6 4 0 6 6 1 2 3 ]
+
+Generation 6
+
+Tournament 1
+Chosen Individual 4 Fitness = 20
+Chosen Individual 4 Fitness = 20
+Winner Individual = 4
+
+Tournament 2
+Chosen Individual 3 Fitness = 23
+Chosen Individual 1 Fitness = 21
+Winner Individual = 3
+
+Tournament 3
+Chosen Individual 3 Fitness = 23
+Chosen Individual 1 Fitness = 21
+Winner Individual = 3
+
+Tournament 4
+Chosen Individual 4 Fitness = 20
+Chosen Individual 2 Fitness = 19
+Winner Individual = 4
+
+Population After Mutation:
+[ 0 2 2 7 4 4 7 3 ]
+[ 0 3 7 0 1 5 4 0 ]
+[ 0 3 7 0 1 4 7 3 ]
+[ 0 2 2 7 4 1 4 0 ]
+
+Generation 7
+
+Tournament 1
+Chosen Individual 4 Fitness = 20
+Chosen Individual 4 Fitness = 20
+Winner Individual = 4
+
+Tournament 2
+Chosen Individual 3 Fitness = 23
+Chosen Individual 3 Fitness = 23
+Winner Individual = 3
+
+Tournament 3
+Chosen Individual 4 Fitness = 20
+Chosen Individual 4 Fitness = 20
+Winner Individual = 4
+
+Tournament 4
+Chosen Individual 3 Fitness = 23
+Chosen Individual 3 Fitness = 23
+Winner Individual = 3
+
+Population After Mutation:
+[ 0 3 7 0 1 1 4 0 ]
+[ 0 2 2 7 4 4 7 3 ]
+[ 0 2 2 7 4 4 7 3 ]
+[ 0 3 7 0 1 1 4 0 ]
+
+Generation 8
+
+Tournament 1
+Chosen Individual 1 Fitness = 21
+Chosen Individual 2 Fitness = 19
+Winner Individual = 1
+
+Tournament 2
+Chosen Individual 3 Fitness = 23
+Chosen Individual 1 Fitness = 21
+Winner Individual = 3
+
+Tournament 3
+Chosen Individual 1 Fitness = 21
+Chosen Individual 2 Fitness = 19
+Winner Individual = 1
+
+Tournament 4
+Chosen Individual 2 Fitness = 19
+Chosen Individual 3 Fitness = 23
+Winner Individual = 3
+
+Population After Mutation:
+[ 6 1 7 3 6 1 4 0 ]
+[ 0 3 7 0 1 1 4 0 ]
+[ 6 1 7 3 6 1 4 0 ]
+[ 0 2 7 0 1 1 4 0 ]
+
+Tournament Execution Time = 2 ms
+
+Tournament Finished
+
+*********Population 2 - Tournament********[ 1 5 8 6 3 7 2 4 ]
+[ 4 2 7 3 6 8 5 1 ]
+[ 6 3 1 8 5 2 4 7 ]
+[ 7 4 2 5 8 1 3 6 ]
+
+Generation 1
+
+Perfect Solution Found!
+
+Tournament Execution Time = 0 ms
+
+Tournament Finished
+
+*********Population 3 - Tournament********[ 0 4 7 5 2 6 1 1 ]
+[ 6 1 5 2 0 7 4 4 ]
+[ 3 7 0 4 6 1 5 5 ]
+[ 5 2 6 1 7 4 0 0 ]
+
+Generation 1
+
+Tournament 1
+Chosen Individual 4 Fitness = 27
+Chosen Individual 1 Fitness = 26
+Winner Individual = 4
+
+Tournament 2
+Chosen Individual 4 Fitness = 27
+Chosen Individual 4 Fitness = 27
+Winner Individual = 4
+
+Tournament 3
+Chosen Individual 2 Fitness = 27
+Chosen Individual 1 Fitness = 26
+Winner Individual = 2
+
+Tournament 4
+Chosen Individual 4 Fitness = 27
+Chosen Individual 2 Fitness = 27
+Winner Individual = 4
+
+Population After Mutation:
+[ 5 2 6 1 7 4 0 0 ]
+[ 5 2 6 1 7 4 0 0 ]
+[ 6 1 6 1 7 4 0 0 ]
+[ 5 2 5 2 0 7 4 4 ]
+
+Generation 2
+
+Tournament 1
+Chosen Individual 1 Fitness = 26
+Chosen Individual 4 Fitness = 27
+Winner Individual = 4
+
+Tournament 2
+Chosen Individual 3 Fitness = 26
+Chosen Individual 3 Fitness = 26
+Winner Individual = 3
+
+Tournament 3
+Chosen Individual 4 Fitness = 27
+Chosen Individual 1 Fitness = 26
+Winner Individual = 4
+
+Tournament 4
+Chosen Individual 4 Fitness = 27
+Chosen Individual 3 Fitness = 26
+Winner Individual = 4
+
+Population After Mutation:
+[ 5 2 6 1 7 4 0 0 ]
+[ 3 7 0 4 6 1 5 5 ]
+[ 5 2 6 1 7 4 0 0 ]
+[ 5 2 6 1 7 4 0 0 ]
+
+Generation 3
+
+Tournament 1
+Chosen Individual 1 Fitness = 26
+Chosen Individual 4 Fitness = 27
+Winner Individual = 4
+
+Tournament 2
+Chosen Individual 1 Fitness = 26
+Chosen Individual 1 Fitness = 26
+Winner Individual = 1
+
+Tournament 3
+Chosen Individual 1 Fitness = 26
+Chosen Individual 3 Fitness = 26
+Winner Individual = 1
+
+Tournament 4
+Chosen Individual 3 Fitness = 26
+Chosen Individual 3 Fitness = 26
+Winner Individual = 3
+
+Population After Mutation:
+[ 5 2 6 5 2 6 1 1 ]
+[ 0 4 7 1 7 4 0 0 ]
+[ 0 3 7 5 6 1 5 5 ]
+[ 3 7 0 4 2 6 1 1 ]
+
+Generation 4
+
+Tournament 1
+Chosen Individual 1 Fitness = 26
+Chosen Individual 2 Fitness = 27
+Winner Individual = 2
+
+Tournament 2
+Chosen Individual 1 Fitness = 26
+Chosen Individual 3 Fitness = 26
+Winner Individual = 1
+
+Tournament 3
+Chosen Individual 1 Fitness = 26
+Chosen Individual 2 Fitness = 27
+Winner Individual = 2
+
+Tournament 4
+Chosen Individual 2 Fitness = 27
+Chosen Individual 4 Fitness = 27
+Winner Individual = 2
+
+Population After Mutation:
+[ 6 1 5 2 0 6 1 5 ]
+[ 0 4 7 5 2 7 4 4 ]
+[ 6 1 5 2 0 7 4 4 ]
+[ 6 1 5 2 0 7 4 4 ]
+
+Generation 5
+
+Tournament 1
+Chosen Individual 3 Fitness = 26
+Chosen Individual 1 Fitness = 26
+Winner Individual = 3
+
+Tournament 2
+Chosen Individual 3 Fitness = 26
+Chosen Individual 2 Fitness = 27
+Winner Individual = 2
+
+Tournament 3
+Chosen Individual 4 Fitness = 27
+Chosen Individual 3 Fitness = 26
+Winner Individual = 4
+
+Tournament 4
+Chosen Individual 4 Fitness = 27
+Chosen Individual 4 Fitness = 27
+Winner Individual = 4
+
+Population After Mutation:
+[ 3 7 0 4 6 1 5 4 ]
+[ 6 1 5 2 0 7 4 5 ]
+[ 5 2 6 1 7 4 0 0 ]
+[ 5 2 6 1 7 4 0 0 ]
+
+Generation 6
+
+Tournament 1
+Chosen Individual 2 Fitness = 27
+Chosen Individual 3 Fitness = 26
+Winner Individual = 2
+
+Tournament 2
+Chosen Individual 3 Fitness = 26
+Chosen Individual 4 Fitness = 27
+Winner Individual = 4
+
+Tournament 3
+Chosen Individual 2 Fitness = 27
+Chosen Individual 1 Fitness = 26
+Winner Individual = 2
+
+Tournament 4
+Chosen Individual 1 Fitness = 26
+Chosen Individual 2 Fitness = 27
+Winner Individual = 2
+
+Population After Mutation:
+[ 6 1 5 2 0 7 0 0 ]
+[ 5 2 6 1 7 4 4 4 ]
+[ 3 1 5 2 0 7 4 4 ]
+[ 6 1 5 2 0 7 4 4 ]
+
+Generation 7
+
+Tournament 1
+Chosen Individual 4 Fitness = 27
+Chosen Individual 3 Fitness = 26
+Winner Individual = 4
+
+Tournament 2
+Chosen Individual 2 Fitness = 27
+Chosen Individual 2 Fitness = 27
+Winner Individual = 2
+
+Tournament 3
+Chosen Individual 4 Fitness = 27
+Chosen Individual 4 Fitness = 27
+Winner Individual = 4
+
+Tournament 4
+Chosen Individual 4 Fitness = 27
+Chosen Individual 1 Fitness = 26
+Winner Individual = 4
+
+Population After Mutation:
+[ 5 2 6 1 7 4 4 4 ]
+[ 6 1 5 2 0 7 0 0 ]
+[ 5 2 6 1 7 4 0 0 ]
+[ 5 2 6 1 7 4 0 0 ]
+
+Generation 8
+
+Tournament 1
+Chosen Individual 4 Fitness = 27
+Chosen Individual 4 Fitness = 27
+Winner Individual = 4
+
+Tournament 2
+Chosen Individual 3 Fitness = 26
+Chosen Individual 2 Fitness = 27
+Winner Individual = 2
+
+Tournament 3
+Chosen Individual 4 Fitness = 27
+Chosen Individual 1 Fitness = 26
+Winner Individual = 4
+
+Tournament 4
+Chosen Individual 2 Fitness = 27
+Chosen Individual 3 Fitness = 26
+Winner Individual = 2
+
+Population After Mutation:
+[ 5 2 6 1 7 4 0 0 ]
+[ 6 1 5 2 0 7 4 4 ]
+[ 5 2 6 1 7 7 4 4 ]
+[ 6 1 5 2 0 4 0 0 ]
+
+Tournament Execution Time = 0 ms
+
+Tournament Finished
+
+*********Population 4 - Tournament********[ 0 4 7 5 2 6 1 3 ]
+[ 6 1 5 2 0 7 4 3 ]
+[ 3 7 0 4 6 1 5 2 ]
+[ 5 2 6 1 7 4 0 3 ]
+[ 1 6 2 5 7 4 0 3 ]
+[ 4 7 3 0 2 5 1 6 ]
+
+Generation 1
+
+Perfect Solution Found!
+
+Tournament Execution Time = 0 ms
+
+Tournament Finished
+
+*********Population 5 - Tournament********[ 4 6 0 0 4 4 3 6 ]
+[ 6 5 5 7 1 4 5 1 ]
+[ 5 3 0 7 0 6 3 5 ]
+[ 6 7 4 0 3 3 6 2 ]
+
+Generation 1
+
+Tournament 1
+Chosen Individual 3 Fitness = 23
+Chosen Individual 3 Fitness = 23
+Winner Individual = 3
+
+Tournament 2
+Chosen Individual 3 Fitness = 23
+Chosen Individual 4 Fitness = 23
+Winner Individual = 3
+
+Tournament 3
+Chosen Individual 4 Fitness = 23
+Chosen Individual 2 Fitness = 21
+Winner Individual = 4
+
+Tournament 4
+Chosen Individual 1 Fitness = 20
+Chosen Individual 2 Fitness = 21
+Winner Individual = 2
+
+Population After Mutation:
+[ 5 3 0 7 0 6 3 5 ]
+[ 5 3 0 7 0 6 3 5 ]
+[ 6 5 5 7 1 4 5 1 ]
+[ 6 7 4 0 3 3 6 2 ]
+
+Generation 2
+
+Tournament 1
+Chosen Individual 1 Fitness = 20
+Chosen Individual 1 Fitness = 20
+Winner Individual = 1
+
+Tournament 2
+Chosen Individual 4 Fitness = 23
+Chosen Individual 2 Fitness = 21
+Winner Individual = 4
+
+Tournament 3
+Chosen Individual 4 Fitness = 23
+Chosen Individual 3 Fitness = 23
+Winner Individual = 4
+
+Tournament 4
+Chosen Individual 1 Fitness = 20
+Chosen Individual 2 Fitness = 21
+Winner Individual = 2
+
+Population After Mutation:
+[ 4 6 0 0 4 4 3 2 ]
+[ 6 7 4 0 3 3 6 6 ]
+[ 6 7 4 0 3 4 5 1 ]
+[ 6 5 5 7 1 3 6 2 ]
+
+Generation 3
+
+Tournament 1
+Chosen Individual 1 Fitness = 20
+Chosen Individual 3 Fitness = 23
+Winner Individual = 3
+
+Tournament 2
+Chosen Individual 1 Fitness = 20
+Chosen Individual 4 Fitness = 23
+Winner Individual = 4
+
+Tournament 3
+Chosen Individual 1 Fitness = 20
+Chosen Individual 2 Fitness = 21
+Winner Individual = 2
+
+Tournament 4
+Chosen Individual 2 Fitness = 21
+Chosen Individual 3 Fitness = 23
+Winner Individual = 3
+
+Population After Mutation:
+[ 5 3 0 7 0 6 3 3 ]
+[ 6 7 4 0 3 3 6 1 ]
+[ 6 5 5 7 1 6 3 5 ]
+[ 5 3 0 5 0 4 5 1 ]
+
+Generation 4
+
+Tournament 1
+Chosen Individual 4 Fitness = 23
+Chosen Individual 2 Fitness = 21
+Winner Individual = 4
+
+Tournament 2
+Chosen Individual 2 Fitness = 21
+Chosen Individual 3 Fitness = 23
+Winner Individual = 3
+
+Tournament 3
+Chosen Individual 1 Fitness = 20
+Chosen Individual 3 Fitness = 23
+Winner Individual = 3
+
+Tournament 4
+Chosen Individual 1 Fitness = 20
+Chosen Individual 4 Fitness = 23
+Winner Individual = 4
+
+Population After Mutation:
+[ 6 7 4 0 0 6 3 5 ]
+[ 5 3 0 7 3 3 6 2 ]
+[ 5 3 0 7 0 6 3 5 ]
+[ 6 7 4 0 3 3 6 2 ]
+
+Generation 5
+
+Tournament 1
+Chosen Individual 2 Fitness = 21
+Chosen Individual 3 Fitness = 23
+Winner Individual = 3
+
+Tournament 2
+Chosen Individual 4 Fitness = 23
+Chosen Individual 4 Fitness = 23
+Winner Individual = 4
+
+Tournament 3
+Chosen Individual 2 Fitness = 21
+Chosen Individual 3 Fitness = 23
+Winner Individual = 3
+
+Tournament 4
+Chosen Individual 2 Fitness = 21
+Chosen Individual 1 Fitness = 20
+Winner Individual = 2
+
+Population After Mutation:
+[ 5 3 0 7 0 6 6 2 ]
+[ 6 7 4 0 3 3 3 5 ]
+[ 5 3 0 7 0 6 3 5 ]
+[ 6 5 5 7 1 4 5 1 ]
+
+Generation 6
+
+Tournament 1
+Chosen Individual 1 Fitness = 20
+Chosen Individual 3 Fitness = 23
+Winner Individual = 3
+
+Tournament 2
+Chosen Individual 3 Fitness = 23
+Chosen Individual 3 Fitness = 23
+Winner Individual = 3
+
+Tournament 3
+Chosen Individual 1 Fitness = 20
+Chosen Individual 1 Fitness = 20
+Winner Individual = 1
+
+Tournament 4
+Chosen Individual 1 Fitness = 20
+Chosen Individual 3 Fitness = 23
+Winner Individual = 3
+
+Population After Mutation:
+[ 5 3 0 7 0 6 3 5 ]
+[ 5 3 0 7 0 6 3 5 ]
+[ 4 6 0 0 0 6 3 5 ]
+[ 5 3 0 7 4 4 3 1 ]
+
+Generation 7
+
+Tournament 1
+Chosen Individual 1 Fitness = 20
+Chosen Individual 2 Fitness = 21
+Winner Individual = 2
+
+Tournament 2
+Chosen Individual 4 Fitness = 23
+Chosen Individual 1 Fitness = 20
+Winner Individual = 4
+
+Tournament 3
+Chosen Individual 4 Fitness = 23
+Chosen Individual 2 Fitness = 21
+Winner Individual = 4
+
+Tournament 4
+Chosen Individual 1 Fitness = 20
+Chosen Individual 1 Fitness = 20
+Winner Individual = 1
+
+Population After Mutation:
+[ 6 5 5 7 1 4 6 2 ]
+[ 7 7 4 0 3 3 5 1 ]
+[ 6 7 0 0 4 4 3 6 ]
+[ 4 6 4 0 3 3 6 2 ]
+
+Generation 8
+
+Tournament 1
+Chosen Individual 1 Fitness = 20
+Chosen Individual 4 Fitness = 23
+Winner Individual = 4
+
+Tournament 2
+Chosen Individual 4 Fitness = 23
+Chosen Individual 4 Fitness = 23
+Winner Individual = 4
+
+Tournament 3
+Chosen Individual 4 Fitness = 23
+Chosen Individual 4 Fitness = 23
+Winner Individual = 4
+
+Tournament 4
+Chosen Individual 4 Fitness = 23
+Chosen Individual 3 Fitness = 23
+Winner Individual = 4
+
+Population After Mutation:
+[ 6 7 4 0 3 3 6 2 ]
+[ 6 7 4 0 3 3 6 2 ]
+[ 6 7 4 0 3 3 6 2 ]
+[ 6 7 4 0 3 3 6 2 ]
+
+Tournament Execution Time = 0 ms
+
+Tournament Finished
