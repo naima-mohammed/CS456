@@ -1,123 +1,77 @@
 #include <iostream>
-#include <vector>
-#include <cmath>
-#include <cstdlib>
-#include <ctime>
-#include <chrono>
-#include <fstream>
-
+#include <vector> // For using to store the population
+#include <cmath> // For abs() function to calculate conflicts
+#include <cstdlib> // For rand() and srand() used in selection, crossover, and mutation in genersating random numbers
+#include <ctime> // For time() function to seed the random number generator
+#include <chrono> // For measuring execution time of the algorithms
+#include <fstream> 
 using namespace std;
 
 class Population {
-
 private:
-
-    vector<vector<int>> population;
-
+    vector<vector<int>> population;// Each individual is represented as a vector 
 public:
-
     // Constructor
     Population() {}
-
-    Population(vector<vector<int>> pop)
-    {
-        population = pop;
-    }
+    Population(vector<vector<int>> pop) { population = pop; }
 
     // Calculate Fitness
     vector<int> calcFitness()
     {
-        vector<int> fitness_vals;
-
-        for (int p = 0; p < population.size(); p++)
+        vector<int> fitness_vals;//إنشاء Vector فارغ لتخزين قيم Fitness.
+        for(int p = 0; p < population.size(); p++)
         {
-            vector<int> x = population[p];
-
-            int conflicts_num = 0;
-
+            vector<int> x = population[p];// Each index represents a column and the value at that index represents the row of the queen in that column
+            int conflicts_num = 0;// Count conflicts
             for (int i = 0; i < 8; i++)
             {
-                int r = x[i];
-
+                int r = x[i]; // Row of the queen in column i
                 for (int j = 0; j < 8; j++)
-                {
-                    if (i == j)
-                        continue;
-
+                {  if (i == j)
+                        continue;// تجاهل مقارنة الملكة بنفسها
                     int d = abs(i - j);
-
-                    if (x[j] == r ||
-                        x[j] == r - d ||
-                        x[j] == r + d)
-                    {
-                        conflicts_num++;
-                    }
+                    if (x[j] == r ||x[j] == r - d || x[j] == r + d) //
+                     {conflicts_num++;}
                 }
             }
 
             int maxPairs = 28;
-
-            fitness_vals.push_back(
-            maxPairs - (conflicts_num / 2));
+            fitness_vals.push_back( maxPairs - (conflicts_num / 2)); // Each conflict is counted twice, so we divide by 2
         }
-
-        return fitness_vals;
+       return fitness_vals;
     }
 
     // Roulette Wheel Selection
     vector<vector<int>> selection(
-    vector<int> fitness_vals,
-    ofstream& out)
-    {
-        vector<double> probs;
+    vector<int> fitness_vals,ofstream& out)
+    {  vector<double> probs; //يستخدم لتخزين الاحتمالات المحسوبة لكل فرد 
 
         // Copy fitness values
         for (int i = 0; i < fitness_vals.size(); i++)
-        {
-            probs.push_back(fitness_vals[i]);
-        }
-
+        { probs.push_back(fitness_vals[i]);}
         // Sum probabilities
         double total = 0;
-
         for (int i = 0; i < probs.size(); i++)
-        {
-            total += probs[i];
-        }
+        {     total += probs[i];  }
 
         // Calculate probabilities
         for (int i = 0; i < probs.size(); i++)
-        {
-            probs[i] = probs[i] / total;
-
-            out << "Selection Probability "
-                << i + 1
-                << " = "
-                << probs[i]
-                << endl;
+        {   probs[i] = probs[i] / total;
+            out << "Selection Probability "<< i + 1<< " = "<< probs[i]<< endl;
         }
-
         int N = population.size();
-
-        vector<vector<int>> selected_population;
-
+        vector<vector<int>> selected_population; // To store selected individuals
         // Random selection
         for (int k = 0; k < N; k++)
-        {
-            double r =
-            (double) rand() / RAND_MAX;
-
-            double cumulative = 0;
-
+        {  double r =(double) rand() / RAND_MAX;
+           double cumulative = 0;
             for (int i = 0; i < N; i++)
             {
                 cumulative += probs[i];
-
                 if (r <= cumulative)
                 {
                     selected_population.push_back(
                     population[i]);
-
                     break;
                 }
             }
@@ -127,88 +81,45 @@ public:
     }
 
     // Tournament Selection
-    vector<vector<int>> tournamentSelection(
-    int k,
-    ofstream& out)
+    vector<vector<int>> tournamentSelection(int k, ofstream& out)
     {
-        vector<int> fitness =
-        calcFitness();
-
+        vector<int> fitness =calcFitness();
         vector<vector<int>> selected_population;
-
         int N = population.size();
-
         for (int s = 0; s < N; s++)
         {
             int bestFitness = -1;
-
             int bestIndex = 0;
-
-            out << "\nTournament "
-                << s + 1
-                << endl;
-
+            out << "\nTournament " << s + 1 << endl;
             for (int i = 0; i < k; i++)
             {
-                int randomIndex =
-                rand() % N;
-
-                out << "Chosen Individual "
-                    << randomIndex + 1
-                    << " Fitness = "
-                    << fitness[randomIndex]
-                    << endl;
-
-                if (fitness[randomIndex]
-                    > bestFitness)
-                {
-                    bestFitness =
-                    fitness[randomIndex];
-
-                    bestIndex =
-                    randomIndex;
+                int randomIndex =rand() % N;
+                out << "Chosen Individual " << randomIndex + 1<< " Fitness = "<< fitness[randomIndex] << endl;
+                if (fitness[randomIndex]> bestFitness)
+                {    bestFitness = fitness[randomIndex];
+                    bestIndex =randomIndex;
                 }
             }
-
-            out << "Winner Individual = "
-                << bestIndex + 1
-                << endl;
-
-            selected_population.push_back(
-            population[bestIndex]);
+            out << "Winner Individual = " << bestIndex + 1  << endl;
+            selected_population.push_back(population[bestIndex]);
         }
-
-        return selected_population;
+         return selected_population;
     }
-
     // Crossover
-    vector<vector<int>> crossover(
-    vector<vector<int>> selected_population,
-    double pc,
-    ofstream& out)
-    {
-        vector<vector<int>> new_population;
-
-        for (int i = 0;
-             i < selected_population.size();
-             i += 2)
+    vector<vector<int>> crossover(vector<vector<int>> selected_population,double pc, ofstream& out)
+    {   vector<vector<int>> new_population;
+        for (int i = 0;i < selected_population.size();i += 2)
         {
-            vector<int> parent1 =
-            selected_population[i];
-
-            vector<int> parent2 =
-            selected_population[i + 1];
+            vector<int> parent1 =selected_population[i];
+            vector<int> parent2 =selected_population[i + 1];
 
             vector<int> child1;
             vector<int> child2;
 
-            double r =
-            (double) rand() / RAND_MAX;
-
+            double r =(double) rand() / RAND_MAX;
             if (r < pc)
             {
-                int m =
-                rand() % 7 + 1;
+                int m =rand() % 7 + 1;
 
                 //out << "\nCrossover Point = "
                   //  << m
@@ -216,99 +127,59 @@ public:
 
                 // Child 1
                 for (int j = 0; j < m; j++)
-                {
-                    child1.push_back(
-                    parent1[j]);
-                }
-
+                {   child1.push_back(parent1[j]);}
                 for (int j = m; j < 8; j++)
-                {
-                    child1.push_back(
-                    parent2[j]);
-                }
+                {child1.push_back( parent2[j]);}
 
                 // Child 2
                 for (int j = 0; j < m; j++)
-                {
-                    child2.push_back(
-                    parent2[j]);
-                }
-
+                { child2.push_back(parent2[j]);}
                 for (int j = m; j < 8; j++)
-                {
-                    child2.push_back(
-                    parent1[j]);
+                { child2.push_back(parent1[j]);
                 }
             }
-
             else
-            {
-                child1 = parent1;
-
-                child2 = parent2;
-            }
+            {   child1 = parent1;
+                child2 = parent2; }
 
             new_population.push_back(child1);
-
             new_population.push_back(child2);
         }
 
        /// out << "\nTotal Offspring Generated = "
           //  << new_population.size()
           //  << endl;
-//
         return new_population;
     }
 
     // Mutation
-    vector<vector<int>> mutation(
-    vector<vector<int>> population_after_crossover,
-    double pm,
-    ofstream& out)
+    vector<vector<int>> mutation(vector<vector<int>> population_after_crossover,double pm, ofstream& out)
     {
-        for (int i = 0;
-             i < population_after_crossover.size();
-             i++)
-        {
-            double r =
-            (double) rand() / RAND_MAX;
-
+        for (int i = 0; i < population_after_crossover.size(); i++)
+        { double r =(double) rand() / RAND_MAX;
             if (r < pm)
             {
                 int m = rand() % 8;
-
                 int new_value =
                 rand() % 8;
-
                /* out << "\nMutation happened in individual "
                     << i + 1
                     << " at index "
                     << m
                     << endl;*/
-
-                population_after_crossover[i][m]
-                = new_value;
+                population_after_crossover[i][m] = new_value;
             }
         }
-
         return population_after_crossover;
     }
-
     // Print Population
     void printPopulation(ofstream& out)
     {
         for (int i = 0; i < population.size(); i++)
         {
             out << "[ ";
-
-            for (int j = 0;
-                 j < population[i].size();
-                 j++)
-            {
-                out << population[i][j]
-                    << " ";
-            }
-
+            for (int j = 0; j < population[i].size();j++)
+            { out << population[i][j]<< " "; }
             out << "]" << endl;
         }
     }
@@ -317,11 +188,8 @@ public:
 int main()
 {
     srand(time(0));
-
     int generations = 8;
-
     ofstream out("output.txt");
-
     // Population 1
     vector<vector<int>> people1 =
     {
@@ -343,7 +211,7 @@ int main()
     // Population 3
     vector<vector<int>> people3 =
     {
-        {0,4,7,5,2,6,1,1},
+    {0,4,7,5,2,6,1,1},
     {6,1,5,2,0,7,4,4},
     {3,7,0,4,6,1,5,5},
     {5,2,6,1,7,4,0,0}
@@ -371,205 +239,87 @@ int main()
     };
 
     // All Populations
-    vector<vector<vector<int>>> all_populations =
-    {
-        people1,
-        people2,
-        people3,
-        people4,
-        people5
-    };
-
-
-    for (int p = 0;
-         p < all_populations.size();
-         p++)
+    vector<vector<vector<int>>> all_populations ={ people1,people2,people3,people4,people5};
+    for (int p = 0; p < all_populations.size();p++)
     {
         Population roulette_population(
         all_populations[p]);
-
-      
         out << "\n*********Population "<< p + 1 << " - Roulette Wheel************\n";
-
-      
         roulette_population.printPopulation(out);
+        auto roulette_start =chrono::high_resolution_clock::now();
 
-        auto roulette_start =
-        chrono::high_resolution_clock::now();
-
-        for (int g = 1;
-             g <= generations;
-             g++)
-        {
-            out << "\nGeneration "
-                << g
-                << endl;
-
-            vector<int> fitness =
-            roulette_population.calcFitness();
-
+        for (int g = 1;g <= generations;g++)
+        {  out << "\nGeneration " << g<< endl;
+            vector<int> fitness =roulette_population.calcFitness();
             // Best Fitness
-            int bestFitness =
-            fitness[0];
+            int bestFitness =fitness[0];
 
-            for (int i = 1;
-                 i < fitness.size();
-                 i++)
+            for (int i = 1; i < fitness.size();i++)
             {
-                if (fitness[i]
-                    > bestFitness)
-                {
-                    bestFitness =
-                    fitness[i];
-                }
+                if (fitness[i] > bestFitness)
+                {bestFitness =fitness[i];}
             }
-
             // Stop if perfect solution found
             if (bestFitness == 28)
             {
                 out << "\nPerfect Solution Found!\n";
-
                 break;
             }
 
-            vector<vector<int>> selected =
-            roulette_population.selection(
-            fitness,
-            out);
-
-            vector<vector<int>> crossed =
-            roulette_population.crossover(
-            selected,
-            0.8,
-            out);
-
-            vector<vector<int>> mutated =
-            roulette_population.mutation(
-            crossed,
-            0.2,
-            out);
-
+            vector<vector<int>> selected =roulette_population.selection(fitness,out);
+            vector<vector<int>> crossed =roulette_population.crossover( selected, 0.8, out);
+            vector<vector<int>> mutated = roulette_population.mutation( crossed,  0.2, out);
             out << "\nPopulation After Mutation:\n";
-
-            for (int i = 0;
-                 i < mutated.size();
-                 i++)
+            for (int i = 0;i < mutated.size();  i++)
             {
                 out << "[ ";
-
-                for (int j = 0;
-                     j < mutated[i].size();
-                     j++)
-                {
-                    out << mutated[i][j]
-                        << " ";
-                }
-
+                for (int j = 0;j < mutated[i].size();j++)
+                {out << mutated[i][j] << " ";}
                 out << "]" << endl;
             }
         }
 
-        auto roulette_end =
-        chrono::high_resolution_clock::now();
-
-        auto roulette_duration =
-        chrono::duration_cast
-        <chrono::milliseconds>
+        auto roulette_end =chrono::high_resolution_clock::now();
+        auto roulette_duration =chrono::duration_cast<chrono::milliseconds>
         (roulette_end - roulette_start);
-
-        out << "\nRoulette Execution Time = "
-            << roulette_duration.count()
-            << " ms\n";
-
+        out << "\nRoulette Execution Time = " << roulette_duration.count() << " ms\n";
         out << "\nRoulette Finished\n";
     }
 
-   
-
-    for (int p = 0;
-         p < all_populations.size();
-         p++)
+    for (int p = 0;p < all_populations.size();p++)
     {
         Population tournament_population(
         all_populations[p]);
-
-       
-        out << "\n*********Population "
-            << p + 1
-            << " - Tournament********";
-
-   
+        out << "\n*********Population " << p + 1<< " - Tournament********";
         tournament_population.printPopulation(out);
-
-        auto tournament_start =
-        chrono::high_resolution_clock::now();
-
-        for (int g = 1;
-             g <= generations;
-             g++)
+        auto tournament_start =chrono::high_resolution_clock::now();
+        for (int g = 1; g <= generations; g++)
         {
-            out << "\nGeneration "
-                << g
-                << endl;
-
-            vector<int> fitness =
-            tournament_population.calcFitness();
-
+            out << "\nGeneration "<< g<< endl;
+            vector<int> fitness =tournament_population.calcFitness();
             // Best Fitness
-            int bestFitness =
-            fitness[0];
-
-            for (int i = 1;
-                 i < fitness.size();
-                 i++)
+            int bestFitness =fitness[0];
+            for (int i = 1; i < fitness.size();i++)
             {
-                if (fitness[i]
-                    > bestFitness)
-                {
-                    bestFitness =
-                    fitness[i];
-                }
+                if (fitness[i]> bestFitness)
+                { bestFitness =fitness[i]; }
             }
 
             // Stop if perfect solution found
             if (bestFitness == 28)
-            {
-                out << "\nPerfect Solution Found!\n";
+               {out << "\nPerfect Solution Found!\n";
+                break;  }
 
-                break;
-            }
-
-            vector<vector<int>> selected =
-            tournament_population
-            .tournamentSelection(
-            2,
-            out);
-
-            vector<vector<int>> crossed =
-            tournament_population.crossover(
-            selected,
-            0.8,
-            out);
-
-            vector<vector<int>> mutated =
-            tournament_population.mutation(
-            crossed,
-            0.2,
-            out);
-
+            vector<vector<int>> selected =tournament_population.tournamentSelection( 2,out);
+            vector<vector<int>> crossed =tournament_population.crossover( selected,0.8, out);
+            vector<vector<int>> mutated = tournament_population.mutation(crossed, 0.2,out);
             out << "\nPopulation After Mutation:\n";
 
-            for (int i = 0;
-                 i < mutated.size();
-                 i++)
+            for (int i = 0;i < mutated.size();i++)
             {
                 out << "[ ";
-
-                for (int j = 0;
-                     j < mutated[i].size();
-                     j++)
-                {
-                    out << mutated[i][j]
+                for (int j = 0; j < mutated[i].size();j++)
+                {out << mutated[i][j]
                         << " ";
                 }
 
@@ -577,22 +327,11 @@ int main()
             }
         }
 
-        auto tournament_end =
-        chrono::high_resolution_clock::now();
-
-        auto tournament_duration =
-        chrono::duration_cast
-        <chrono::milliseconds>
-        (tournament_end - tournament_start);
-
-        out << "\nTournament Execution Time = "
-            << tournament_duration.count()
-            << " ms\n";
-
+        auto tournament_end =chrono::high_resolution_clock::now();
+        auto tournament_duration =chrono::duration_cast<chrono::milliseconds>(tournament_end - tournament_start);
+        out << "\nTournament Execution Time = " << tournament_duration.count()<< " ms\n";
         out << "\nTournament Finished\n";
     }
-
     out.close();
-
     return 0;
 }
